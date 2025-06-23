@@ -1,0 +1,15 @@
+.carousel {
+    display: flex;
+    transition: transform 0.6s ease-in-out; // ✅ added "s" for seconds
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  

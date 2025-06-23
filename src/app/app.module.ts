@@ -3,17 +3,29 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { MainCarouselComponent } from './home/main-carousel/main-carousel.component';
+import { HomeProductCardComponent } from './home/home-product-card/home-product-card.component';
+import { ProductSliderComponent } from './home/product-slider/product-slider.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    MainCarouselComponent,
+    HomeProductCardComponent,
+    ProductSliderComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
