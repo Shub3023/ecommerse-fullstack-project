@@ -1,1 +1,64 @@
-<p>navbar works!</p>
+<div
+  class="fixed top-0 z-50 right-0 left-0 bg-[#69f0ae] text-gray-800 flex justify-between items-center px-5 lg: px-20"
+>
+  <div class="flex items-center">
+    <div class="h-16 flex items-center justify-between px-4">
+      <img
+        class="w-8"
+        src="https://picasso.cosmofeed.com/picture-profile.s3-ap-south-1.amazonaws.com/my_image1719814990-2024-01-07-06-23-10.png?w=600&&q=100"
+        alt="Image not found"
+      />
+    </div>
+    <div>
+      <div class="flex items-center font-semibold text-lg space-x-4">
+        <a routerLink="/" class="text-gray-800"> Shop with Zosh </a>
+
+        <div>
+          <button (click)="openNavContent('men')" mat-button>Men</button>
+        </div>
+
+        <div>
+          <button (click)="openNavContent('women')" mat-button>Women</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center">
+    <button
+      class="open-button"
+      (click)="navigateToCart('cart')"
+      mat-icon-button
+    >
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+    <button
+      class="open-button"
+      *ngIf="false"
+      mat-raised-button
+      type=""
+      color="accent"
+    >
+      LOGIN
+    </button>
+    <div class="relative ml-3 flex items-center">
+      <div class="flex items-center space-x-5">
+        <span class="font-bold text-lg">Shubham</span>
+        <button mat-button [matMenuTriggerFor]="menu">
+          <img
+            class="h-12 w-12 rounded-full"
+            src="https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_1280.jpg"
+            alt=""
+          />
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Profile</button>
+          <button mat-menu-item>Orders</button>
+          <button mat-menu-item>Log Out</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isNavbarContentOpen" class="modal-container">
+  <app-nav-content [selectedSection]="currentSection"></app-nav-content>
+</div>

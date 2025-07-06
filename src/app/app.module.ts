@@ -9,6 +9,11 @@ import { HomeProductCardComponent } from './home/home-product-card/home-product-
 import { ProductSliderComponent } from './home/product-slider/product-slider.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NavContentComponent } from './navbar/nav-content/nav-content.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +23,16 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeProductCardComponent,
     ProductSliderComponent,
     NavbarComponent,
+    NavContentComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule
+    
   ],
   providers: [
     provideClientHydration(),
