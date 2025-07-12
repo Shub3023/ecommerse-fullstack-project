@@ -1,5 +1,5 @@
 import { Component, Inject, PLATFORM_ID, OnInit, OnDestroy } from '@angular/core';
-import { homeCarouselData } from '../../../Data/mainCarousel';
+import { homeCarouselData } from '../../../../../../Data/mainCarousel';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({

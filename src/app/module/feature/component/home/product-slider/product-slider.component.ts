@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { menJeans } from '../../../Data/Men/men_jeans';
+import { menJeans } from '../../../../../../Data/Men/men_jeans';
 
 @Component({
   selector: 'app-product-slider',
