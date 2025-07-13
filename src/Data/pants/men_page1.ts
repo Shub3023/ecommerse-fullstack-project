@@ -32,7 +32,7 @@ export const mensPantsPage1=[
         "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/jean/v/c/n/30-586035-v-mart-original-imagmh7fzah3r2jj.jpeg?q=70",
         "brand": "V-MART",
         "title": "Men Slim Mid Rise Grey Jeans",
-        "color": "",
+        "color": "red",
         "discountedPrice": 398,
         "price": 3999,
         "size": [

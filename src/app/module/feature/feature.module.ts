@@ -11,6 +11,8 @@ import { HomeProductCardComponent } from './component/home/home-product-card/hom
 import { ProductsComponent } from './component/products/products.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import { SharedModule } from "../shared/shared.module";
 @NgModule({
   declarations: [
     FeatureComponent,
@@ -20,7 +22,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     HomeProductCardComponent,
     ProductsComponent
   ],
-  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule ],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule, MatRadioModule, SharedModule],
   exports: [FeatureComponent, HomeComponent, ProductsComponent],
 })
 export class FeatureModule {}
