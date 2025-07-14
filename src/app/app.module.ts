@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { FeatureModule } from './module/feature/feature.module';
 import { SharedModule } from './module/shared/shared.module';
+import { AdminModule } from './module/admin/admin.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +25,9 @@ import { SharedModule } from './module/shared/shared.module';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+    AdminModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],

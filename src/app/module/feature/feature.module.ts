@@ -13,6 +13,15 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { SharedModule } from "../shared/shared.module";
+import { CartComponent } from './component/cart/cart.component';
+import { ProductDetailsComponent } from './component/product-details/product-details.component';
+import { CheckoutComponent } from './component/checkout/checkout.component';
+import { PaymentComponent } from './component/payment/payment.component';
+import { PaymentSuccessComponent } from './component/payment-success/payment-success.component';
+import { OrderComponent } from './component/order/order.component';
+import { OrderDetailsComponent } from './component/order-details/order-details.component';
+import { FormsModule } from '@angular/forms';
+import { ProductReviewCardComponent } from './component/product-details/product-review-card/product-review-card.component';
 @NgModule({
   declarations: [
     FeatureComponent,
@@ -20,9 +29,17 @@ import { SharedModule } from "../shared/shared.module";
     MainCarouselComponent,
     ProductSliderComponent,
     HomeProductCardComponent,
-    ProductsComponent
+    ProductsComponent,
+    CartComponent,
+    ProductDetailsComponent,
+    CheckoutComponent,
+    PaymentComponent,
+    PaymentSuccessComponent,
+    OrderComponent,
+    OrderDetailsComponent,
+    ProductReviewCardComponent
   ],
-  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule, MatRadioModule, SharedModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule, MatRadioModule, SharedModule, FormsModule],
   exports: [FeatureComponent, HomeComponent, ProductsComponent],
 })
 export class FeatureModule {}
