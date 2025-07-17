@@ -22,6 +22,8 @@ import { OrderComponent } from './component/order/order.component';
 import { OrderDetailsComponent } from './component/order-details/order-details.component';
 import { FormsModule } from '@angular/forms';
 import { ProductReviewCardComponent } from './component/product-details/product-review-card/product-review-card.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 @NgModule({
   declarations: [
     FeatureComponent,
@@ -39,7 +41,7 @@ import { ProductReviewCardComponent } from './component/product-details/product-
     OrderDetailsComponent,
     ProductReviewCardComponent
   ],
-  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule, MatRadioModule, SharedModule, FormsModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule, MatRadioModule, SharedModule, FormsModule, MatProgressBarModule],
   exports: [FeatureComponent, HomeComponent, ProductsComponent],
 })
 export class FeatureModule {}

@@ -74,6 +74,113 @@
             </div>
           </div>
         </div>
+        <div class="col-span-5 mt-10 lg:mt-0">
+          <div class="box">
+            <h6 class="text-sm font-semibold pb-1">Products Ratings</h6>
+            <div class="flex items-center space-x-3 pb-10">
+              <app-star-rating></app-star-rating>
+              <p class="opacity-60">4234Ratinggs</p>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Excellent</span>
+                  </div>
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar
+                      mode="determinate"
+                      value="80"
+                    ></mat-progress-bar>
+                  </div>
+                  <div class="col-span-2">
+                    <span class="opacity-50">1233442</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Very good</span>
+                  </div>
+
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar
+                      mode="determinate"
+                      value="60"
+                    ></mat-progress-bar>
+                  </div>
+
+                  <div class="col-span-2">
+                    <span class="opacity-50">123344</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>good</span>
+                  </div>
+
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar
+                      mode="determinate"
+                      value="40"
+                    ></mat-progress-bar>
+                  </div>
+
+                  <div class="col-span-2">
+                    <span class="opacity-50">12334</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Average</span>
+                  </div>
+
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar
+                      mode="determinate"
+                      value="20"
+                    ></mat-progress-bar>
+                  </div>
+
+                  <div class="col-span-2">
+                    <span class="opacity-50">1233</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Poor</span>
+                  </div>
+
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar
+                      mode="determinate"
+                      value="10"
+                    ></mat-progress-bar>
+                  </div>
+
+                  <div class="col-span-2">
+                    <span class="opacity-50">123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-10">
+    <h6 class="text-lg. py-5 text-gray-400">Related Products</h6>
+    <div class="flex justify-around flex-wrap">
+      <div *ngFor="let item of relatedProducts">
+        <app-product-card [product]="item"></app-product-card>
       </div>
     </div>
   </section>
