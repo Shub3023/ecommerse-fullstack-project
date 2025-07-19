@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cart', component: CartComponent },
   { path: 'product-details', component: ProductDetailsComponent },
+  { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'checkout/payment/:id', component: PaymentComponent },
   { path: ':lavelOne/:lavelTwo/:lavelThree ', component: ProductsComponent },

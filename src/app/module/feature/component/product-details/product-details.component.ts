@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { lehngacholiPage2 } from '../../../../../Data/Saree/lenghaCholiPage2';
-import { log } from 'console';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-product-details',
@@ -11,12 +11,18 @@ export class ProductDetailsComponent {
   selectedSize: any;
   reviews: any[] = [1, 1, 1, 1, 1];
   relatedProducts: any;
-  handleAddToCart() {
-    console.log(this.selectedSize);
-  }
 
+  constructor(private router: Router){
+
+  }
   ngOnInit(){
     this.relatedProducts = lehngacholiPage2;
-
   }
+
+    handleAddToCart() {
+    console.log(this.selectedSize);
+    this.router.navigate(['cart'])
+  }
+
+  
 }

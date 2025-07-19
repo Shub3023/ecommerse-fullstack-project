@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { log } from 'console';
 
 @Component({
@@ -9,12 +9,16 @@ import { log } from 'console';
 })
 export class ProductCardComponent {
   @Input() product: any;
-  
-  constructor(private activateRouter: ActivatedRoute){
 
-  }
+  constructor(private activateRouter: ActivatedRoute, private router: Router) {}
   ngOnInit() {
     console.log(this.product);
   }
+  navigate(productId: number) {
+    this.router.navigate(['/product-details/' + productId]);
+  }
 
+  route() {
+    console.log('product card');
+  }
 }

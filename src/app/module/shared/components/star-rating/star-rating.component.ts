@@ -17,6 +17,6 @@ constructor(){
 }
 
 rate(rating:number){
-
+this.currentRating = rating;
 }
 }

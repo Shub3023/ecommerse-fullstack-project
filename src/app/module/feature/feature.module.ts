@@ -20,10 +20,12 @@ import { PaymentComponent } from './component/payment/payment.component';
 import { PaymentSuccessComponent } from './component/payment-success/payment-success.component';
 import { OrderComponent } from './component/order/order.component';
 import { OrderDetailsComponent } from './component/order-details/order-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductReviewCardComponent } from './component/product-details/product-review-card/product-review-card.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import { AddressFormComponent } from './component/checkout/address-form/address-form.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     FeatureComponent,
@@ -39,9 +41,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     PaymentSuccessComponent,
     OrderComponent,
     OrderDetailsComponent,
-    ProductReviewCardComponent
+    ProductReviewCardComponent,
+    AddressFormComponent,
   ],
-  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule, MatRadioModule, SharedModule, FormsModule, MatProgressBarModule],
-  exports: [FeatureComponent, HomeComponent, ProductsComponent],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatDividerModule, MatCheckboxModule, MatRadioModule, SharedModule, FormsModule, MatProgressBarModule,FormsModule, MatFormFieldModule, MatInputModule,ReactiveFormsModule],
+  exports: [FeatureComponent, HomeComponent, ProductsComponent, ],
 })
 export class FeatureModule {}
