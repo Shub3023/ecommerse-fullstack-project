@@ -20,7 +20,7 @@
   </div>
 
   <div class="mt-5 flex items-center lg:space-10 justify-between">
-    <div class="flex items-center space-x-2">
+    <div *ngIf="showButton" class="flex items-center space-x-2">
       <div class="example-button-container">
         <button
           mat-mini-fab
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <button (click)="removeCartItem()" color="accent" mat-stroked-button>
+    <button *ngIf="showButton" (click)="removeCartItem()" color="accent" mat-stroked-button>
       Remove
     </button>
   </div>

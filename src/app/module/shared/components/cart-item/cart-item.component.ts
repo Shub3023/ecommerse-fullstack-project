@@ -1,26 +1,21 @@
-import { Component } from '@angular/core';
-import { log } from 'console';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cart-item',
   templateUrl: './cart-item.component.html',
-  styleUrl: './cart-item.component.scss'
+  styleUrl: './cart-item.component.scss',
 })
 export class CartItemComponent {
- constructor(){
+  @Input() showButton: any;
+  constructor() {}
 
- }
+  ngOnInit() {}
 
- ngOnInit(){
+  updateCartItem(num: number) {
+    console.log(num);
+  }
 
- }
-
- updateCartItem(num:number){
-  console.log(num);
- }
-
- removeCartItem(){
-  console.log("remvoed cart item");
-  
- }
+  removeCartItem() {
+    console.log('remvoed cart item');
+  }
 }
